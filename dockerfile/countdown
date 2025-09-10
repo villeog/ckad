@@ -1,11 +1,13 @@
 #!/bin/sh
 
-COUNTER=$1
-COUNTER=$(( COUNTER * 60 ))
+COUNTER=$3
+COUNTER=$(( COUNTER * 5 ))
 
-while true
+while [ $COUNTER -gt 0 ]
 do
-	echo $COUNTER seconds remaining in break
-	COUNTER=$(( COUNTER - 1 ))
-	sleep 1
+        echo $COUNTER seconds remaining in break
+        COUNTER=$(( COUNTER - 1 ))
+        sleep 1
 done
+
+echo "Break Over"
